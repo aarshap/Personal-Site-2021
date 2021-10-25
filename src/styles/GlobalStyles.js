@@ -26,6 +26,7 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         line-height: var(--line-height-heading);
         padding: 0 80px;
+        margin: 0;
     }
 
     // Typography
@@ -51,6 +52,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     h5 {
+        font-family: var(--family-accent);
         font-size: 12px;
         font-weight: 400;
         line-height: var(--line-height-heading);
