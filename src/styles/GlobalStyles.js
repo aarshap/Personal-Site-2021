@@ -60,6 +60,19 @@ const GlobalStyles = createGlobalStyle`
         line-height: var(--line-height-paragraph);
     }
 
+    // Buttons and links
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font: inherit;
+        line-height: initial;
+        margin: 0;
+        padding: 0;
+        text-transform: inherit;
+    }
+
 `
 
 export default GlobalStyles
