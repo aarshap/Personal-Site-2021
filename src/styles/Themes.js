@@ -1,7 +1,21 @@
 export const light = {
-    background: "#FFFFFF"
+    color: {
+        background: "#FFFFFF",
+        brand: {
+            background: "#FAF6EF",
+            primary: "#D7B25F"
+        },
+        text: "#000000"
+    }
 }
 
 export const dark = {
-    background: "#000000"
+    color: {
+        background: "#000000",
+        brand: {
+            background: "#FAF6EF",
+            primary: "#D7B25F"
+        },
+        text: "#FFFFFF"
+    }
 }
