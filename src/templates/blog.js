@@ -7,6 +7,7 @@ import ArticleMedia from "../components/ArticleMedia"
 // import ArticleRecirc from "../components/ArticleRecirc"
 import Grid from "../components/Grid"
 import Layout from "../components/Layout"
+import Pill from "../components/Pill"
 import SEO from "../components/SEO"
 
 export default ({ data, pageContext }) => {
@@ -46,19 +47,21 @@ export default ({ data, pageContext }) => {
                 title={post.frontmatter.title}
                 description={post.frontmatter.dek}
             />
-            <h1>{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.dek}</p>
-            <h5>{post.frontmatter.date}</h5>
-            <h5>{post.frontmatter.category}</h5>
-            <MDXProvider components={includedComponents}>
-                <MDXRenderer>
-                    {post.body}
-                </MDXRenderer>
-            </MDXProvider>
-            {/* <ArticleRecirc
-                previous={previousProps}
-                next={nextProps}
-            /> */}
+            <div className="container">
+                <h1>{post.frontmatter.title}</h1>
+                <p>{post.frontmatter.dek}</p>
+                <Pill>{post.frontmatter.date}</Pill>
+                <Pill>{post.frontmatter.category}</Pill>
+                <MDXProvider components={includedComponents}>
+                    <MDXRenderer>
+                        {post.body}
+                    </MDXRenderer>
+                </MDXProvider>
+                {/* <ArticleRecirc
+                    previous={previousProps}
+                    next={nextProps}
+                /> */}
+            </div>
         </Layout>
     )
 }

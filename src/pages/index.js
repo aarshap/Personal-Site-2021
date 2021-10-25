@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import ArticleCard from "../components/ArticleCard"
 import Layout from "../components/Layout"
 
 export default () => {
@@ -74,23 +75,32 @@ export default () => {
         <Layout>
             <div>
                 <h1>A good guy who makes good websites.</h1>
-                <p>I’m Aaron – a Brooklyn-based product designer with over a decade of experience working on behalf of journalists, artists, and makers.</p>
-                <p>Creative people make me happy.</p>
-            </div>
-            <h3>Work</h3>
-            <a href="#">
-                <h4>VICE</h4>
-                <p>Small team. Big network.</p>
-                <h5>2016–2020</h5>
-            </a>
-            <h3>Writing</h3>
-            <a href="#">
-                <h4>On Relearning to Code</h4>
-                <div>
-                <h5>2021</h5>
-                <h5>Code</h5>
+                <div className="container">
+                    <p>I’m Aaron – a Brooklyn-based product designer with over a decade of experience working on behalf of journalists, artists, and makers.</p>
+                    <p>Creative people make me happy.</p>
                 </div>
-            </a>
+            </div>
+            <div className="container">
+                <h3>Writing</h3>
+                {data.blog.edges.map(({ node }) => (
+                    <ArticleCard
+                        key={node.id}
+                        slug={node.fields.slug}
+                        title={node.frontmatter.title}
+                        date={node.frontmatter.date}
+                        category={node.frontmatter.category}
+                    />
+                ))}
+                <h3>Photography</h3>
+                {data.photography.edges.map(({ node }) => (
+                    <ArticleCard
+                        key={node.id}
+                        slug={node.fields.slug}
+                        title={node.frontmatter.title}
+                        date={node.frontmatter.date}
+                        />
+                ))}
+            </div>
         </Layout>
     )
 }

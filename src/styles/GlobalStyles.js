@@ -52,6 +52,7 @@ const GlobalStyles = createGlobalStyle`
 
     h5 {
         font-size: 12px;
+        font-weight: 400;
         line-height: var(--line-height-heading);
     }
 
@@ -71,6 +72,13 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         text-transform: inherit;
+    }
+
+    // Containers
+
+    .container {
+        margin: 0 auto;
+        max-width: 800px;
     }
 
 `
