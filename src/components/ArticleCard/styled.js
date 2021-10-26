@@ -1,15 +1,18 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
-export const Wrapper = styled.div`
-    margin-bottom: 24px;
-`
-
-export const Content = styled.div`
+export const StyledLink = styled(Link)`
     align-items: center;
+    background-color: ${props => props.theme.color.brand.background};
+    border-radius: 56px;
+    color: ${props => props.theme.color.text};
     display: flex;
+    margin-bottom: 24px;
+    padding: 32px;
+    text-decoration: none;
 `
 
-export const Title = styled.h4`
+export const Title = styled.h3`
     flex-basis: 100%;
     margin: 0;
 `

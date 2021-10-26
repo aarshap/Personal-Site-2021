@@ -10,8 +10,12 @@ export const Wrapper = styled.div`
     padding: 0 16px;
     text-decoration: none;
 
-    h5 {
+    h4 {
         margin: 0;
+    }
+
+    &:not(:last-child) {
+        margin-right: 8px;
     }
 
 `

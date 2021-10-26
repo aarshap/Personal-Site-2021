@@ -5,7 +5,7 @@ export default (props) => {
     return (
         <Styled.Wrapper>
             <div className="container">
-                <h5>ICYMI.</h5>
+                <h4>ICYMI.</h4>
                 <p>I’m Aaron – a product designer. Thanks for visiting.</p>
             </div>
         </Styled.Wrapper>

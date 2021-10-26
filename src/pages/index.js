@@ -1,7 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import ArticleCard from "../components/ArticleCard"
+import Hero from "../components/Hero"
 import Layout from "../components/Layout"
+import WorkList from "../components/WorkList"
 
 export default () => {
 
@@ -73,33 +75,37 @@ export default () => {
 
     return (
         <Layout>
-            <div>
-                <h1>A good guy who makes good websites.</h1>
-                <div className="container">
-                    <p>I’m Aaron – a Brooklyn-based product designer with over a decade of experience working on behalf of journalists, artists, and makers.</p>
-                    <p>Creative people make me happy.</p>
-                </div>
-            </div>
+            <section>
+                <Hero />
+            </section>
             <div className="container">
-                <h3>Writing</h3>
-                {data.blog.edges.map(({ node }) => (
-                    <ArticleCard
-                        key={node.id}
-                        slug={node.fields.slug}
-                        title={node.frontmatter.title}
-                        date={node.frontmatter.date}
-                        category={node.frontmatter.category}
-                    />
-                ))}
-                <h3>Photography</h3>
-                {data.photography.edges.map(({ node }) => (
-                    <ArticleCard
-                        key={node.id}
-                        slug={node.fields.slug}
-                        title={node.frontmatter.title}
-                        date={node.frontmatter.date}
+                <section>
+                    <h3>Work</h3>
+                    <WorkList />
+                </section>
+                <section>
+                    <h3>Writing</h3>
+                    {data.blog.edges.map(({ node }) => (
+                        <ArticleCard
+                            key={node.id}
+                            slug={node.fields.slug}
+                            title={node.frontmatter.title}
+                            date={node.frontmatter.date}
+                            category={node.frontmatter.category}
                         />
-                ))}
+                    ))}
+                </section>
+                <section>
+                    <h3>Photography</h3>
+                    {data.photography.edges.map(({ node }) => (
+                        <ArticleCard
+                            key={node.id}
+                            slug={node.fields.slug}
+                            title={node.frontmatter.title}
+                            date={node.frontmatter.date}
+                            />
+                    ))}
+                </section>
             </div>
         </Layout>
     )

@@ -8,6 +8,6 @@ export const Wrapper = styled.div`
 
 `
 
-export const Caption = styled.h5`
+export const Caption = styled.h4`
 
 `

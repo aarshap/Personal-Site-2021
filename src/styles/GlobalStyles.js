@@ -14,8 +14,11 @@ const GlobalStyles = createGlobalStyle`
 
         // Line heights
 
-        --line-height-heading: 1.1;
-        --line-height-paragraph: 1.5;
+        --line-height-display: 1.1;
+        --line-height-heading: 1.5;
+        --line-height-paragraph: 1.7;
+
+    }
 
     // Base page styles
 
@@ -29,29 +32,34 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
 
+    section {
+        margin: 160px auto;
+    }
+
     // Typography
 
     h1 {
+        font-family: var(--family-heading);
         font-size: 80px;
-        line-height: var(--line-height-heading);
+        font-weight: 800;
+        line-height: var(--line-height-display);
     }
 
     h2 {
+        font-family: var(--family-heading);
         font-size: 56px;
+        font-weight: 800;
         line-height: var(--line-height-heading);
     }
 
     h3 {
-        font-size: 32px;
+        font-family: var(--family-heading);
+        font-size: 28px;
+        font-weight: 500;
         line-height: var(--line-height-heading);
     }
 
     h4 {
-        font-size: 28px;
-        line-height: var(--line-height-heading);
-    }
-
-    h5 {
         font-family: var(--family-accent);
         font-size: 12px;
         font-weight: 400;
@@ -59,7 +67,9 @@ const GlobalStyles = createGlobalStyle`
     }
 
     p {
+        font-family: var(--family-body);
         font-size: 28px;
+        font-weight: 400;
         line-height: var(--line-height-paragraph);
     }
 
