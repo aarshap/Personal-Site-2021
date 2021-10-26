@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import ArticleCard from "../components/ArticleCard"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 import WorkList from "../components/WorkList"
 
 export default () => {
@@ -75,6 +76,9 @@ export default () => {
 
     return (
         <Layout>
+            <SEO
+                title="Home"
+            />
             <section>
                 <Hero />
             </section>

@@ -48,15 +48,19 @@ export default ({ data, pageContext }) => {
                 description={post.frontmatter.dek}
             />
             <div className="container">
-                <h1>{post.frontmatter.title}</h1>
-                <p>{post.frontmatter.dek}</p>
-                <Pill>{post.frontmatter.date}</Pill>
-                <Pill>{post.frontmatter.category}</Pill>
+                <section>
+                    <h1>{post.frontmatter.title}</h1>
+                    <p>{post.frontmatter.dek}</p>
+                    <Pill>{post.frontmatter.date}</Pill>
+                    <Pill>{post.frontmatter.category}</Pill>
+                </section>
+                <section>
                 <MDXProvider components={includedComponents}>
                     <MDXRenderer>
                         {post.body}
                     </MDXRenderer>
                 </MDXProvider>
+                </section>
                 {/* <ArticleRecirc
                     previous={previousProps}
                     next={nextProps}
