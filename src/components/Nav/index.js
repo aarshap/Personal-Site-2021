@@ -1,11 +1,41 @@
-import React from "react"
+import React, { useState } from "react"
 import * as Styled from "./styled"
 import { Link } from "gatsby"
+import CloseMenuIcon from "./closeMenuIcon"
+import MenuOverlay from "./MenuOverlay"
 import ThemeSwitcher from "./themeSwitcher"
+import WorkMenu from "./WorkMenu"
 
 export default () => {
+
+    // Menu states
+
+    const [workMenuOpen, setWorkMenuOpen] = useState(false)
+    const [infoMenuOpen, setInfoMenuOpen] = useState(false)
+
+    // Toggle menu visibility
+
+    const toggleWorkMenu = () => {
+        workMenuOpen ? setWorkMenuOpen(false) : setWorkMenuOpen(true)
+    }
+
+    const toggleInfoMenu = () => {
+        infoMenuOpen ? setInfoMenuOpen(false) : setInfoMenuOpen(true)
+    }
+
+    const closeMenus = () => {
+        setWorkMenuOpen(false)
+        setInfoMenuOpen(false)
+    }
+
     return (
-        <>
+        <Styled.Wrapper>
+            { workMenuOpen &&
+                <>
+                    <MenuOverlay closeMenus={closeMenus} />
+                    <WorkMenu closeMenus={closeMenus} />
+                </>
+            }
             <Styled.Bar position="left">
                 <Link to="/">
                     <Styled.ClickTarget>
@@ -15,10 +45,14 @@ export default () => {
                         </Styled.Logo>
                     </Styled.ClickTarget>
                 </Link>
-                <button>
+                <button onClick={() => toggleWorkMenu()}>
                     <Styled.ClickTarget rotate="270">
-                        <p>Work</p>
+                        { workMenuOpen
+                            ? <CloseMenuIcon />
+                            : <h3>Work</h3>
+                        }
                     </Styled.ClickTarget>
+                    
                 </button>
                 <ThemeSwitcher />
             </Styled.Bar>
@@ -30,9 +64,12 @@ export default () => {
                         </Styled.Icon>
                     </Styled.ClickTarget>
                 </button>
-                <button>
+                <button onClick={() => toggleInfoMenu()}>
                     <Styled.ClickTarget rotate="90">
-                        <p>Info</p>
+                        { infoMenuOpen
+                            ? <CloseMenuIcon />
+                            : <h3>Info</h3>
+                        }
                     </Styled.ClickTarget>
                 </button>
                 <button>
@@ -47,6 +84,6 @@ export default () => {
                     </Styled.ClickTarget>
                 </button>
             </Styled.Bar>
-        </>
+        </Styled.Wrapper>
     )
 }

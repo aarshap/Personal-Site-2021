@@ -50,7 +50,7 @@ export default ({ data, pageContext }) => {
             <div className="container">
                 <section>
                     <h1>{post.frontmatter.title}</h1>
-                    <p>{post.frontmatter.dek}</p>
+                    <h3>{post.frontmatter.dek}</h3>
                     <Pill>{post.frontmatter.date}</Pill>
                     <Pill>{post.frontmatter.category}</Pill>
                 </section>
