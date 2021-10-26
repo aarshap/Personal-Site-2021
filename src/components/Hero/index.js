@@ -5,7 +5,17 @@ export default () => {
     return (
         <Styled.Wrapper>
             <Styled.Statement>
-                A <Styled.Highlight>good guy</Styled.Highlight> who makes <Styled.Highlight>good websites</Styled.Highlight>.
+                <div className="large">
+                    A <Styled.Highlight>good guy</Styled.Highlight> who<br />
+                    makes <Styled.Highlight>good websites</Styled.Highlight>.
+                </div>
+                <div className="small">
+                    A <Styled.Highlight>good<br />
+                    guy</Styled.Highlight> who<br />
+                    makes<br />
+                    <Styled.Highlight>good<br />
+                    websites</Styled.Highlight>.
+                </div>
             </Styled.Statement>
             <div className="container">
                 <h3>I’m Aaron – a Brooklyn-based product designer with over a decade of experience working on behalf of journalists, artists, and makers.</h3>
