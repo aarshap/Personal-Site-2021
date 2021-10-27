@@ -29,6 +29,24 @@ export default () => {
         document.body.style.overflow = "visible";
     }
 
+    // Scroll to top
+
+    const scrollToTop = () => { 
+        window.scrollTo({ 
+          top: 0, 
+          behavior: 'smooth'
+        })
+    }
+
+    // Scroll to bottom
+
+    const scrollToBottom = () => { 
+        window.scrollTo({ 
+          top: document.documentElement.scrollHeight, 
+          behavior: 'smooth'
+        })
+    }
+    
     return (
         <>
             { menuOpen && <Menu closeMenu={closeMenu} /> }
@@ -61,7 +79,7 @@ export default () => {
             </Styled.Bar>
             <Styled.Bar position="right">
                 <div>
-                    <Styled.StyledButton>
+                    <Styled.StyledButton onClick={() => scrollToTop()}>
                         <Styled.ClickTarget>
                             { !menuOpen &&
                                 <Styled.Icon xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +99,7 @@ export default () => {
                     </Styled.StyledLink>
                 </div>
                 <div>
-                    <Styled.StyledButton>
+                    <Styled.StyledButton onClick={() => scrollToBottom()}>
                         <Styled.ClickTarget>
                             { !menuOpen &&
                                 <Styled.Icon xmlns="http://www.w3.org/2000/svg">

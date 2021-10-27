@@ -15,7 +15,7 @@ export default () => {
             <div className="container">
                 <section>
                     <ArticleBody>
-                        <h2>I’m Aaron – a product designer living in Brooklyn, New York.</h2>
+                        <h2>I’m <em>Aaron</em> – a product designer living in Brooklyn, New York.</h2>
                         <p>I was most recently the director of product design at <Link to="/work/vice">VICE</Link>. I also worked with two <Link to="/work/cover">small</Link> <Link to="/work/karma">startups</Link>, a not-so-small <Link to="/work/etsy">tech company</Link>, and spent a few years living agency life. My broad experience makes me adaptable, I think.</p>
                         <p>Aside from work, I love to take photos, shake drinks, tend to my balcony garden, and continue to wait patiently for a successful Minnesota Timberwolves season. Sometimes I <a href="https://twitch.tv/okayaaron">stream</a> very, very old video games.</p>
                         <p>Good inspiration comes from experience. I try to stand often and spend time away from my desk. It helps.</p>
