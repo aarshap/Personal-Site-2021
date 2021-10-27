@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Wrapper = styled.div`
     position: relative;
 
-    .mdx-embed {
+    > .mdx-embed {
         margin: var(--su) auto;
 
         &:first-child {
@@ -16,7 +16,24 @@ export const Wrapper = styled.div`
 
     }
 
-    h1, h2 {
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6:not(.caption),
+    > header,
+    > footer,
+    > hgroup,
+    > section,
+    > blockquote,
+    > hr,
+    > ol,
+    > ul,
+    > p,
+    > embed,
+    > iframe,
+    > pre {
         margin: 1em 0;
 
         &:first-child {
@@ -29,20 +46,7 @@ export const Wrapper = styled.div`
 
     }
 
-    h3, h4, h5, h6:not(.caption), header, footer, hgroup, section, blockquote, hr, ol, ul, p, embed, iframe, pre {
-        margin: 1em 0;
-
-        &:first-child {
-            margin-top: 0;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-    }
-
-    .twitter-tweet {
+    > .twitter-tweet {
         margin-left: auto;
         margin-right: auto;
     }

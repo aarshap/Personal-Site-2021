@@ -17,8 +17,6 @@ module.exports = {
         {
             resolve: "gatsby-plugin-mdx",
             options: {
-                extensions: [".md", ".mdx"],
-                plugins: [`gatsby-remark-images`],
                 gatsbyRemarkPlugins: [
                     {
                         resolve: "gatsby-remark-images",
@@ -27,9 +25,12 @@ module.exports = {
                             maxWidth: 1600,
                             quality: 90
                         }
-                    }
-                ]
-            }
+                    },
+                ],
+                plugins: [
+                    "gatsby-remark-images"
+                ],
+            },
         },
         {
             resolve: "gatsby-plugin-web-font-loader",

@@ -1,43 +1,55 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-// import { MDXRenderer } from "gatsby-plugin-mdx"
-// import { MDXProvider } from "@mdx-js/react"
-// import ArticleBody from "../components/ArticleBody"
-// import ArticleMedia from "../components/ArticleMedia"
-// import Grid from "../components/Grid"
-// import Image from "../components/Image"
-// import PhotographyIntro from "../components/PhotographyIntro"
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXProvider } from "@mdx-js/react"
+import ArticleBody from "../components/ArticleBody"
+import ArticleIntro from "../components/ArticleIntro"
+import ArticleMedia from "../components/ArticleMedia"
+import PhotographyList from "../components/PhotographyList"
+import Grid from "../components/Grid"
+import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 export default ({ data, pageContext }) => {
 
     // Components usable in MDX
 
-    const includedComponents = { Link, Image, ArticleMedia, Grid }
+    const includedComponents = { ArticleMedia, GatsbyImage, getImage, Grid, Link }
 
     // Post data
 
     const post = data.mdx
 
     return (
-        <>
+        <Layout>
             <SEO
                 title={post.frontmatter.title}
                 description={post.frontmatter.dek}
             />
-            {/* <PhotographyIntro
-                date={post.frontmatter.date}
-                title={post.frontmatter.title}
-                keyImage={post.frontmatter.keyImage}
-            />
-            <ArticleBody>
-                <MDXProvider components={includedComponents}>
-                    <MDXRenderer>
-                        {post.body}
-                    </MDXRenderer>
-                </MDXProvider>
-            </ArticleBody> */}
-        </>
+            <div className="container">
+                <section>
+                    <ArticleIntro
+                        type={post.frontmatter.type}
+                        title={post.frontmatter.title}
+                        dek={post.frontmatter.dek}
+                        date={post.frontmatter.date}
+                    />
+                </section>
+                <section>
+                    <ArticleBody>
+                        <MDXProvider components={includedComponents}>
+                            <MDXRenderer>
+                                {post.body}
+                            </MDXRenderer>
+                        </MDXProvider>
+                    </ArticleBody>
+                </section>
+                <section>
+                    <PhotographyList />
+                </section>
+            </div>
+        </Layout>
     )
 }
 
@@ -49,8 +61,7 @@ export const query = graphql`
                 title
                 dek
                 date(formatString: "YYYY")
-                category
-                keyImage
+                type
             }
         }
     }
