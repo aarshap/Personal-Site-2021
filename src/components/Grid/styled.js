@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     }
 
     @media (min-width: 800px) {
-        align-items: ${props => props.alignItems ? props.alignItems : "start" };
+        align-items: start;
         grid-template-columns: repeat(2, minmax(0, 1fr));
 
         > :first-child {

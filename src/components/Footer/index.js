@@ -16,7 +16,7 @@ export default () => {
                 </div>
             </Styled.PrimaryWrapper>
             <Styled.SecondaryWrapper>
-                <div class="container">
+                <div className="container">
                     <Styled.SecondaryInner>
                         <h3>
                             © {new Date().getFullYear()}

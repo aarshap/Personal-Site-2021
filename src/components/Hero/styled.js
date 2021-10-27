@@ -26,10 +26,6 @@ export const Statement = styled.h1`
 
 ` 
 
-export const Highlight = styled.span`
-    color: ${props => props.theme.color.brand.primary};
-`
-
 export const Bio = styled.h3`
 
     &:not(:last-child) {

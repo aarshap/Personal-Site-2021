@@ -4,8 +4,6 @@ import PropTypes from "prop-types"
 
 const SEO = (props) => {
 
-    // const currentUrl = `${data.site.siteMetadata.canonicalUrl}${location.href}`
-
     const title = `${props.title} — Aaron Shapiro`
 
     return (

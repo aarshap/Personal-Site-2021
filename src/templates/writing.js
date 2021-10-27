@@ -11,7 +11,7 @@ import Grid from "../components/Grid"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-export default ({ data, pageContext }) => {
+export default ({ data }) => {
 
     // Components usable in MDX
 
