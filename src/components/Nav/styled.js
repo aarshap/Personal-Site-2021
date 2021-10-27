@@ -1,26 +1,12 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
-export const Wrapper = styled.div`
-    position: relative;
-    z-index: 2;
-`
-
-// Logo
+// SVGs
 
 export const Logo = styled.svg`
     height: 20px;
     width: 44px;
 `
-
-export const LogoText = styled.path`
-    fill: ${props => props.theme.color.text};
-`
-
-export const LogoDot = styled.circle`
-    fill: ${props => props.theme.color.brand.primary};
-`
-
-// Other SVGs
 
 export const Icon = styled.svg`
     height: 40px;
@@ -28,16 +14,28 @@ export const Icon = styled.svg`
 `
 
 export const Path = styled.path`
-    fill: ${props => props.theme.color.text};
+    fill: ${props => props.theme.color.text.inverted};
     fill-rule: evenodd;
     clip-rule: evenodd;
 `
 
 export const Circle = styled.circle`
-    fill: ${props => props.theme.color.text};
+    fill: ${props => props.theme.color.text.inverted};
+`
+
+export const BrandCircle = styled.circle`
+    fill: ${props => props.theme.color.brand.primary};
 `
 
 // Placement
+
+export const LogoDotWrapper = styled.div`
+    display: flex;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+`
 
 export const Bar = styled.div`
     bottom: 0;
@@ -45,10 +43,17 @@ export const Bar = styled.div`
     flex-direction: column;
     justify-content: space-between;
     left: ${props => props.position === "left" ? 0 : "auto"};
+    mix-blend-mode: difference;
     position: fixed;
     right: ${props => props.position === "right" ? 0 : "auto"};
     top: 0;
     width: 80px;
+    z-index: 4;
+
+    > div {
+        min-height: 80px;
+    }
+
 `
 
 // Buttons
@@ -60,4 +65,12 @@ export const ClickTarget = styled.div`
     min-height: 80px;
     transform: ${props => props.rotate ? `rotate(${props.rotate}deg)` : "none"};
     width: 80px;
+`
+
+export const StyledButton = styled.button`
+    color: ${props => props.theme.color.text.inverted};
+`
+
+export const StyledLink = styled(Link)`
+    color: ${props => props.theme.color.text.inverted};
 `

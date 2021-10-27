@@ -1,4 +1,5 @@
 import React from "react"
+import * as Styled from "./styled"
 import { ThemeContextProvider } from "../../contexts/ThemeContext"
 import GlobalStyles from "../../styles/GlobalStyles"
 import Footer from "../Footer"
@@ -11,9 +12,11 @@ export default ({ children }) => {
             <ThemeContextProvider>
                 <Theme>
                     <GlobalStyles />
-                    <Nav />
-                    { children }
-                    <Footer />
+                    <Styled.Wrapper>
+                        <Nav />
+                        { children }
+                        <Footer />
+                    </Styled.Wrapper>
                 </Theme>
             </ThemeContextProvider>
         </>

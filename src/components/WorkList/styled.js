@@ -30,15 +30,15 @@ export const Dek = styled.h3`
 export const StyledLink = styled(Link)`
     background-color: ${props => props.theme.color.brand.background};
     border-radius: 56px;
-    color: ${props => props.theme.color.text};
+    color: ${props => props.theme.color.text.normal};
     display: flex;
     flex-direction: column;
     padding: 32px;
     text-decoration: none;
 
     &.vice {
-        background-color: ${props => props.theme.color.text};
-        color: ${props => props.theme.color.background};
+        background-color: ${props => props.theme.color.text.normal};
+        color: ${props => props.theme.color.background.normal};
         margin-bottom: 24px;
         overflow: hidden;
         text-align: center;

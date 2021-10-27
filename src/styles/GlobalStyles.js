@@ -23,12 +23,11 @@ const GlobalStyles = createGlobalStyle`
     // Base page styles
 
     body {
-        background-color: ${props => props.theme.color.background};
-        color: ${props => props.theme.color.text};
+        background-color: ${props => props.theme.color.background.normal};
+        color: ${props => props.theme.color.text.normal};
         font-family: var(--family-body);
         font-weight: 400;
         line-height: var(--line-height-heading);
-        padding: 0 80px;
         margin: 0;
     }
 
@@ -49,7 +48,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: var(--family-heading);
         font-size: 56px;
         font-weight: 800;
-        line-height: var(--line-height-heading);
+        line-height: var(--line-height-display);
     }
 
     h3 {

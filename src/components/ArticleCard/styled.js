@@ -5,7 +5,7 @@ export const StyledLink = styled(Link)`
     align-items: center;
     background-color: ${props => props.theme.color.brand.background};
     border-radius: 56px;
-    color: ${props => props.theme.color.text};
+    color: ${props => props.theme.color.text.normal};
     display: flex;
     margin-bottom: 24px;
     padding: 32px;

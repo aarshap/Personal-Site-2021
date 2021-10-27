@@ -32,17 +32,20 @@ export default (props) => {
     `)
 
     return (
-        <Styled.Wrapper>
-            {data.allMdx.edges.map(({ node }) => (
-                <Styled.StyledLink
-                    onClick={() => props.toggleWorkMenu()}
-                    to={node.fields.slug}
-                    key={node.id}
-                >
-                    <Styled.Title>{node.frontmatter.title}</Styled.Title>
-                    <Pill>{node.frontmatter.dateStart === node.frontmatter.dateEnd ? node.frontmatter.dateEnd : `${node.frontmatter.dateStart} - ${node.frontmatter.dateEnd}`}</Pill>
-                </Styled.StyledLink>
-            ))}
-        </Styled.Wrapper>
+        <>
+            <Styled.Overlay onClick={() => props.closeMenu()} />
+            <Styled.Menu>
+                {data.allMdx.edges.map(({ node }) => (
+                    <Styled.StyledLink
+                        onClick={() => props.closeMenu()}
+                        to={node.fields.slug}
+                        key={node.id}
+                    >
+                        <Styled.Title>{node.frontmatter.title}</Styled.Title>
+                        <Pill>{node.frontmatter.dateStart === node.frontmatter.dateEnd ? node.frontmatter.dateEnd : `${node.frontmatter.dateStart} - ${node.frontmatter.dateEnd}`}</Pill>
+                    </Styled.StyledLink>
+                ))}
+            </Styled.Menu>
+        </>
     )
 }
