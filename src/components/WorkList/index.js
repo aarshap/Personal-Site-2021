@@ -3,9 +3,10 @@ import * as Styled from "./styled"
 import { StaticImage } from "gatsby-plugin-image"
 import Pill from "../Pill"
 
-export default (props) => {
+export default () => {
     return (
         <>
+            <Styled.SectionTitle>Work</Styled.SectionTitle>
             <Styled.StyledLink
                 to="/work/vice"
                 className="vice"

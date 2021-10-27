@@ -1,6 +1,11 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+export const SectionTitle = styled.h3`
+    margin-bottom: 24px;
+    text-align: center;
+`
+
 export const Masonry = styled.div`
     display: flex;
     gap: 24px;

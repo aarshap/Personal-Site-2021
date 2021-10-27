@@ -18,8 +18,8 @@ export default () => {
                 </div>
             </Styled.Statement>
             <div className="container">
-                <h3>I’m Aaron – a Brooklyn-based product designer with over a decade of experience working on behalf of journalists, artists, and makers.</h3>
-                <h3>Creative people make me <Styled.Highlight>happy</Styled.Highlight>.</h3>
+                <Styled.Bio>I’m Aaron – a Brooklyn-based product designer with over a decade of experience working on behalf of journalists, artists, and makers.</Styled.Bio>
+                <Styled.Bio>Creative people make me <Styled.Highlight>happy</Styled.Highlight>.</Styled.Bio>
             </div>
         </Styled.Wrapper>
     )

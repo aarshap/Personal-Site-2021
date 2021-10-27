@@ -69,8 +69,20 @@ export const ClickTarget = styled.div`
 
 export const StyledButton = styled.button`
     color: ${props => props.theme.color.text.inverted};
+    text-decoration: none;
+
+    &:hover {
+        color: ${props => props.theme.color.text.inverted};
+    }
+
 `
 
 export const StyledLink = styled(Link)`
     color: ${props => props.theme.color.text.inverted};
+    text-decoration: none;
+
+    &:visited {
+        color: ${props => props.theme.color.text.inverted};
+    }
+    
 `

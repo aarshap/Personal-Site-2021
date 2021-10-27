@@ -3,6 +3,7 @@ title: "On Relearning to Code"
 date: "2021-01-12"
 dek: "How I finally learned (some) React for the relaunch of my website."
 category: "Code"
+type: "Writing"
 ---
 
 I'm a product designer – whatever that means.
@@ -11,13 +12,13 @@ With a profession as vaguely defined as ours, people are identified by their ski
 
 Our skills aren't permanent. Technology moves fast. Research methods change. Styles evolve. Languages and frameworks emerge. I spent four years at VICE doing what the team needed me to do – designing mockups, advocating for our product throughout the company, and eventually managing our team. Code was best left to the engineers because I was more efficient elsewhere. While I never stopped identifying as “technical,” I got rusty. So when I left VICE in September, it was time to relearn to code.
 
-### Building on Gatsby
+## Building on Gatsby
 
 My previous site was built with [Middleman](https://middlemanapp.com/) – a Ruby-based static site generator (SSG) I learned in 2015. An SSG was perfect for a website updated as infrequently as mine. Page templates and data were split apart locally, but it compiled to simple HTML, CSS, and JavaScript. Because it was static, I hosted it subscription-free on Github pages.
 
 But like I said, our industry moves fast. Middleman felt ancient compared to the tools I watched our engineers use at VICE. When I learned about [Gatsby](https://www.gatsbyjs.com/) – a more contemporary React-based SSG, I decided to give it a try.
 
-![Gatsby](../images/blog/on_relearning_to_code/gatsby_homepage.png "Gatsby")
+![Gatsby](../images/writing/on_relearning_to_code/gatsby_homepage.png)
 
 I never _really_ learned JavaScript. Libraries like jQuery simplified basic interactions while obfuscating what was actually happening in the browser. Relying on those libraries limited my work to what was available with plugins and Stack Overflow answers.
 
@@ -27,11 +28,11 @@ So I stepped back and started from the beginning. I studied [ES6](https://www.w3
 
 Shortcuts are great for implementing one-off interactions, but learning fundamentals eventually pays off.
 
-### Unlearning old habits with Styled Components
+## Unlearning old habits with Styled Components
 
 After seeing our codebase bloat at Etsy, I developed techniques for structuring scalable CSS. We organized our code and files using agreed-upon rules. We wrote generic, highly specific classes that could be used across components. It was highly opinionated and we had to fight to ensure other contributors stuck to our guidelines. So when I saw [Gatsby recommended CSS-in-JS](https://www.gatsbyjs.com/docs/tutorial/part-two/), I scoffed. It seemed like an over engineered solution to a problem that could be solved with planning and restraint.
 
-![Styled Components homepage](../images/blog/on_relearning_to_code/styled_components_homepage.png)
+![Styled Components homepage](../images/writing/on_relearning_to_code/styled_components_homepage.png)
 
 I mean, look at that syntax! It's practically CSS. Why not just use CSS?
 
@@ -177,19 +178,19 @@ By giving each of my animated components an <code>initial</code>, <code>animate<
 
 <ArticleMedia caption="In case you missed them">
     <video autoPlay muted loop className="has-shadow">
-        <source src="/blog/on_relearning_to_code/site_animations.mp4" type="video/mp4" />
+        <source src="/writing/on_relearning_to_code/site_animations.mp4" type="video/mp4" />
     </video>
 </ArticleMedia>
 
-### Not all problems have technical solutions
+## Not all problems have technical solutions
 
 I wrote, rewrote, and refactored a lot of code over the last month. Learning new things is hard. Sometimes when your brain is in a fog you have to log off, tape a bedsheet to your wall, and turn your Covid-era apartment into a bootleg photo studio.
 
-![Bedsheet on my wall](../images/blog/on_relearning_to_code/bedsheet.jpg)
+![Bedsheet on my wall](../images/writing/on_relearning_to_code/bedsheet.jpg)
 
 Despite how low-rent this looks, you too can have a <Link to="/info">dramatic headshot</Link> for the price of one bedsheet.
 
-### It's a start.
+## It's a start.
 
 I had a lot of fun going overboard for the sake of learning something new. Night mode was unnecessary. Recomposing my case studies in Markdown and serving them with GraphQL was unnecessary. Adding one line of jiggly text to my bio was _definitely_ unnecessary, but it made me laugh. More features should be prioritized by whether they make someone laugh.
 

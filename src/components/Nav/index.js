@@ -82,13 +82,13 @@ export default () => {
                     </Styled.StyledButton>
                 </div>
                 <div>
-                    <Styled.StyledButton>
+                    <Styled.StyledLink to="/info">
                         <Styled.ClickTarget rotate="90">
                             { !menuOpen &&
                                 <h3>Info</h3>
                             }
                         </Styled.ClickTarget>
-                    </Styled.StyledButton>
+                    </Styled.StyledLink>
                 </div>
                 <div>
                     <Styled.StyledButton>

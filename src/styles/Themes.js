@@ -18,12 +18,18 @@ export const light = {
 
 export const dark = {
     color: {
-        background: "#000000",
-        divider: "#E9E9E9",
+        background: {
+            normal: "#000000",
+            inverted: "#000000"
+        },
+        divider: "#222222",
         brand: {
-            background: "#FAF6EF",
+            background: "#111111",
             primary: "#D7B25F"
         },
-        text: "#FFFFFF"
+        text: {
+            normal: "#FFFFFF",
+            inverted: "#FFFFFF"
+        }
     }
 }

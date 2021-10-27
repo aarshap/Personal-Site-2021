@@ -20,6 +20,31 @@ const GlobalStyles = createGlobalStyle`
 
     }
 
+    // Reset and adjusting defaults
+
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    svg {
+        display: block;
+    }
+
+    video {
+        display: block;
+        width: 100%;
+    }
+
     // Base page styles
 
     body {
@@ -85,11 +110,37 @@ const GlobalStyles = createGlobalStyle`
         text-transform: inherit;
     }
 
+    a,
+    a:visited,
+    button {
+        color: ${props => props.theme.color.text.normal};
+        text-decoration: underline;
+        text-decoration-color: ${props => props.theme.color.brand.primary};
+        text-decoration-thickness: 3px;
+        text-underline-offset: 0.1em;
+
+        &.inverted {
+            color: ${props => props.theme.color.text.inverted};
+            text-decoration-color: ${props => props.theme.color.brand.primary};
+        }
+
+        &.hideUnderline {
+            text-decoration: none;
+        }
+
+    }
+
     // Containers
 
     .container {
         margin: 0 auto;
         max-width: 800px;
+    }
+
+    // Generic .has-shadow class to place a shadow on any element
+
+    .has-shadow {
+        box-shadow: 0 32px 32px rgba(0,0,0,0.05), 0 16px 16px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 0 2px rgba(0,0,0,0.2);
     }
 
 `

@@ -15,7 +15,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     }
 }
 
-// Generate pages for blog posts
+// Generate pages for writing posts
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
@@ -24,12 +24,12 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const result = await graphql(`
         query {
-            blog: allMdx(
+            writing: allMdx(
                 sort: { 
                     fields: [frontmatter___date],
                     order: DESC 
                 },
-                filter: { fileAbsolutePath: {regex: "/(blog)/"} }
+                filter: { fileAbsolutePath: {regex: "/(writing)/"} }
             ) {
                 edges {
                     node {
@@ -90,14 +90,12 @@ exports.createPages = async ({ graphql, actions }) => {
         }
     `)
 
-    result.data.blog.edges.forEach(({ node, next, previous }) => {
+    result.data.writing.edges.forEach(({ node, next, previous }) => {
         createPage({
             path: node.fields.slug,
-            component: path.resolve(`./src/templates/blog.js`),
+            component: path.resolve(`./src/templates/writing.js`),
             context: {
-                slug: node.fields.slug,
-                next,
-                previous
+                slug: node.fields.slug
             },
         })
     })
