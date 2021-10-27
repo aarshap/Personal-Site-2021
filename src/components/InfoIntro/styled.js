@@ -3,10 +3,12 @@ import styled from "styled-components"
 export const Wrapper = styled.div`
     align-items: center;
     background-color: ${props => props.theme.color.background.inverted};
+    border-radius: 0 0 56px 56px;
     color: ${props => props.theme.color.text.inverted};
     display: flex;
     height: 600px;
-    margin: 0 -80px;
+    overflow: hidden;
+    padding: 0 32px;
     position: relative;
 `
 

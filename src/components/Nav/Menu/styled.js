@@ -41,7 +41,7 @@ export const StyledLink = styled(Link)`
     text-decoration: none;
 
     &:not(:last-child) {
-        border-bottom: 1px solid ${props => props.theme.color.divider};
+        border-bottom: 1px solid ${props => props.theme.color.divider.normal};
     }
 
 `

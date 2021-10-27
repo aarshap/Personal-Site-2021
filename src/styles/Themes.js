@@ -4,7 +4,10 @@ export const light = {
             normal: "#FFFFFF",
             inverted: "#000000"
         },
-        divider: "#E9E9E9",
+        divider: {
+            normal: "#E9E9E9",
+            inverted: "#222222"
+        },
         brand: {
             background: "#FAF6EF",
             primary: "#D7B25F"

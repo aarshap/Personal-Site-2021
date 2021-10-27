@@ -57,7 +57,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     section {
-        margin: 160px auto;
+        margin: 120px auto;
     }
 
     // Typography
@@ -95,6 +95,11 @@ const GlobalStyles = createGlobalStyle`
         font-size: 28px;
         font-weight: 400;
         line-height: var(--line-height-paragraph);
+    }
+
+    em {
+        color: ${props => props.theme.color.brand.primary};
+        font-style: normal;
     }
 
     // Buttons and links
