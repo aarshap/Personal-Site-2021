@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 import * as Styled from "./styled"
 import { Link } from "gatsby"
-import CloseMenuIcon from "./closeMenuIcon"
 import ThemeSwitcher from "./themeSwitcher"
-import Menu from "./Menu"
+import Menu from "../NavMenu"
 
 export default () => {
 
@@ -64,14 +63,16 @@ export default () => {
                     </Link>
                 </div>
                 <div>
-                    <Styled.StyledButton onClick={() => toggleMenu()}>
+                    <button onClick={() => toggleMenu()}>
                         <Styled.ClickTarget rotate="270">
                             { menuOpen
-                                ? <CloseMenuIcon />
+                                ? <Styled.Icon xmlns="http://www.w3.org/2000/svg">
+                                    <Styled.Path d="M29.795 32 32 29.795 22.205 20 32 10.205 29.795 8 20 17.795 10.205 8 8 10.205 17.795 20 8 29.795 10.205 32 20 22.205 29.795 32Z" />
+                                  </Styled.Icon>                    
                                 : <h3>Work</h3>
                             }
                         </Styled.ClickTarget>
-                    </Styled.StyledButton>
+                    </button>
                 </div>
                 <div>
                     { !menuOpen && <ThemeSwitcher /> }
@@ -79,7 +80,7 @@ export default () => {
             </Styled.Bar>
             <Styled.Bar position="right">
                 <div>
-                    <Styled.StyledButton onClick={() => scrollToTop()}>
+                    <button onClick={() => scrollToTop()}>
                         <Styled.ClickTarget>
                             { !menuOpen &&
                                 <Styled.Icon xmlns="http://www.w3.org/2000/svg">
@@ -87,19 +88,19 @@ export default () => {
                                 </Styled.Icon>
                             }
                         </Styled.ClickTarget>
-                    </Styled.StyledButton>
+                    </button>
                 </div>
                 <div>
-                    <Styled.StyledLink to="/info">
+                    <Link to="/info">
                         <Styled.ClickTarget rotate="90">
                             { !menuOpen &&
                                 <h3>Info</h3>
                             }
                         </Styled.ClickTarget>
-                    </Styled.StyledLink>
+                    </Link>
                 </div>
                 <div>
-                    <Styled.StyledButton onClick={() => scrollToBottom()}>
+                    <button onClick={() => scrollToBottom()}>
                         <Styled.ClickTarget>
                             { !menuOpen &&
                                 <Styled.Icon xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +108,7 @@ export default () => {
                                 </Styled.Icon>
                             }
                         </Styled.ClickTarget>
-                    </Styled.StyledButton>
+                    </button>
                 </div>
             </Styled.Bar>
         </>

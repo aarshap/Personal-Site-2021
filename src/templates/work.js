@@ -6,6 +6,7 @@ import { MDXProvider } from "@mdx-js/react"
 import ArticleBody from "../components/ArticleBody"
 import ArticleIntro from "../components/ArticleIntro"
 import ArticleMedia from "../components/ArticleMedia"
+import ArticleTitleBar from "../components/ArticleTitleBar"
 import Grid from "../components/Grid"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
@@ -26,6 +27,7 @@ export default ({ data }) => {
                 title={post.frontmatter.title}
                 description={post.frontmatter.dek}
             />
+            <ArticleTitleBar title={post.frontmatter.title} />
             <div className="container">
                 <section>
                     <ArticleIntro

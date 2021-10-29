@@ -33,7 +33,7 @@ export const Dek = styled.h3`
 `
 
 export const StyledLink = styled(Link)`
-    background-color: ${props => props.theme.color.brand.background};
+    background-color: ${props => props.theme.color.background.brand};
     border-radius: 56px;
     color: ${props => props.theme.color.text.normal};
     display: flex;
@@ -41,9 +41,13 @@ export const StyledLink = styled(Link)`
     padding: 32px;
     text-decoration: none;
 
+    :hover ${Dek} {
+        color: ${props => props.theme.color.text.normal};
+    }
+
     &.vice {
-        background-color: ${props => props.theme.color.text.normal};
-        color: ${props => props.theme.color.background.normal};
+        background-color: ${props => props.theme.color.background.inverted};
+        color: ${props => props.theme.color.text.inverted};
         margin-bottom: 24px;
         overflow: hidden;
         text-align: center;
@@ -51,6 +55,10 @@ export const StyledLink = styled(Link)`
         div${ImageWrapper} {
             margin: -32px -32px 32px -32px;
         }
+
+        :hover ${Dek} {
+            color: ${props => props.theme.color.text.inverted};
+        }    
 
     }
 

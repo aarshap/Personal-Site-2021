@@ -46,7 +46,7 @@ export default ({ data }) => {
                     </ArticleBody>
                 </section>
                 <section>
-                    <PhotographyList />
+                    <PhotographyList sectionTitle="More photography" />
                 </section>
             </div>
         </Layout>

@@ -98,8 +98,24 @@ const GlobalStyles = createGlobalStyle`
     }
 
     em {
-        color: ${props => props.theme.color.brand.primary};
+        color: ${props => props.theme.color.text.brand};
         font-style: normal;
+    }
+
+    pre {
+        background: ${props => props.theme.color.background.brand};
+        font-size: 18px;
+        padding: 32px;
+
+        code {
+            display: block;
+            overflow-x: scroll;
+        }
+
+    }
+
+    code {
+        background: ${props => props.theme.color.background.brand};
     }
 
     // Buttons and links
@@ -120,17 +136,21 @@ const GlobalStyles = createGlobalStyle`
     button {
         color: ${props => props.theme.color.text.normal};
         text-decoration: underline;
-        text-decoration-color: ${props => props.theme.color.brand.primary};
+        text-decoration-color: ${props => props.theme.color.text.brand};
         text-decoration-thickness: 3px;
         text-underline-offset: 0.1em;
 
         &.inverted {
             color: ${props => props.theme.color.text.inverted};
-            text-decoration-color: ${props => props.theme.color.brand.primary};
+            text-decoration-color: ${props => props.theme.color.text.brand};
         }
 
         &.hideUnderline {
             text-decoration: none;
+        }
+
+        &:hover {
+            color: ${props => props.theme.color.text.brand};
         }
 
     }

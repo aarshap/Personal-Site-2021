@@ -32,7 +32,12 @@ export default (props) => {
 
     return (
         <>
-            <Styled.SectionTitle>Photography</Styled.SectionTitle>
+            <Styled.SectionTitle>
+                {props.sectionTitle
+                    ? props.sectionTitle
+                    : "Photography"
+                }
+            </Styled.SectionTitle>
             {data.photography.edges.map(({ node }) => (
                 <ArticleCard
                     key={node.id}

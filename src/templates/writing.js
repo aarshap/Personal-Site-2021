@@ -47,7 +47,7 @@ export default ({ data }) => {
                     </ArticleBody>
                 </section>
                 <section>
-                    <WritingList />
+                    <WritingList sectionTitle="More writing" />
                 </section>
             </div>
         </Layout>

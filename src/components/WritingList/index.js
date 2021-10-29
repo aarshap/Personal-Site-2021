@@ -33,7 +33,12 @@ export default (props) => {
 
     return (
         <>
-            <Styled.SectionTitle>Writing</Styled.SectionTitle>
+            <Styled.SectionTitle>
+                {props.sectionTitle
+                    ? props.sectionTitle
+                    : "Writing"
+                }
+            </Styled.SectionTitle>
             {data.writing.edges.map(({ node }) => (
                 <ArticleCard
                     key={node.id}

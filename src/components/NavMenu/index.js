@@ -1,7 +1,7 @@
 import React from "react"
 import * as Styled from "./styled"
 import { graphql, useStaticQuery } from "gatsby"
-import Pill from "../../Pill"
+import Pill from "../Pill"
 
 export default (props) => {
 

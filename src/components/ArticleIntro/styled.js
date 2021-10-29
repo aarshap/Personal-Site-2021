@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Eyebrow = styled.h3`
-    color: ${props => props.theme.color.brand.primary};
+    color: ${props => props.theme.color.text.brand};
     margin-bottom: 32px;
 `
 
@@ -14,7 +14,7 @@ export const Dek = styled.h3`
 `
 
 export const MetaWrapper = styled.div`
-    background-color: ${props => props.theme.color.brand.background};
+    background-color: ${props => props.theme.color.background.brand};
     border-radius: 32px;
     padding: 32px;
 `

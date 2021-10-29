@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 export const StyledLink = styled(Link)`
     align-items: center;
-    background-color: ${props => props.theme.color.brand.background};
+    background-color: ${props => props.theme.color.background.brand};
     border-radius: 56px;
     color: ${props => props.theme.color.text.normal};
     display: flex;

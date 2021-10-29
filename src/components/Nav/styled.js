@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 // SVGs
 
@@ -24,7 +23,7 @@ export const Circle = styled.circle`
 `
 
 export const BrandCircle = styled.circle`
-    fill: ${props => props.theme.color.brand.primary};
+    fill: ${props => props.theme.color.text.brand};
 `
 
 // Placement
@@ -39,7 +38,7 @@ export const Bar = styled.div`
     right: ${props => props.position === "right" ? 0 : "auto"};
     top: 0;
     width: 80px;
-    z-index: 4;
+    z-index: 5;
 
     > div {
         min-height: 80px;
@@ -56,8 +55,10 @@ export const ClickTarget = styled.div`
     min-height: 80px;
     transform: ${props => props.rotate ? `rotate(${props.rotate}deg)` : "none"};
     width: 80px;
+
+    &:hover ${Path},
+    &:hover ${Circle} {
+        fill: ${props => props.theme.color.text.brand};
+    }
+
 `
-
-export const StyledButton = styled.button``
-
-export const StyledLink = styled(Link)``

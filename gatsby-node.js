@@ -90,7 +90,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
     `)
 
-    result.data.writing.edges.forEach(({ node, next, previous }) => {
+    result.data.writing.edges.forEach(({ node }) => {
         createPage({
             path: node.fields.slug,
             component: path.resolve(`./src/templates/writing.js`),

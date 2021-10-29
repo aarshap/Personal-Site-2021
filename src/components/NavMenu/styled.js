@@ -9,7 +9,7 @@ export const Overlay = styled.div`
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 
     &:hover {
         cursor: pointer;
@@ -29,7 +29,7 @@ export const Menu = styled.div`
     position: fixed;
     right: 50%;
     top: 0;
-    z-index: 3;
+    z-index: 4;
 `
 
 export const StyledLink = styled(Link)`

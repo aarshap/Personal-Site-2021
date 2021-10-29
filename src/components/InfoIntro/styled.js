@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
 export const ImageWrapper = styled.div`
     height: 600px;
     left: 50%;
+    mix-blend-mode: screen;
     position: absolute;
     transform: translateX(-30%);
     top: 0;
@@ -28,7 +29,7 @@ export const Content = styled.div`
 `
 
 export const PageTitle = styled.h3`
-    color: ${props => props.theme.color.brand.primary};
+    color: ${props => props.theme.color.text.brand};
     margin-bottom: 16px;
 `
 

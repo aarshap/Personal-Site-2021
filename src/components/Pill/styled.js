@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Wrapper = styled.div`
     align-items: center;
-    background-color: ${props => props.theme.color.brand.primary};
+    background-color: ${props => props.theme.color.text.brand};
     border-radius: 16px;
     color: ${props => props.theme.color.background.normal};
     display: inline-flex;
