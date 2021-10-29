@@ -13,7 +13,6 @@ module.exports = {
         "gatsby-plugin-styled-components",
         "gatsby-remark-images",
         "gatsby-transformer-sharp",
-        // "gatsby-plugin-twitter",
         {
             resolve: "gatsby-plugin-mdx",
             options: {

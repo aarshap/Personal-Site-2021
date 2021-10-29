@@ -1,6 +1,11 @@
 import styled from "styled-components"
+import { media } from "../../styles/MediaQueries"
 
 export const SectionTitle = styled.h3`
     margin-bottom: 24px;
-    text-align: center;
+
+    @media ${media.md} {
+        text-align: center;
+    }
+
 `

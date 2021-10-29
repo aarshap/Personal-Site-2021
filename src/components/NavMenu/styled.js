@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { media } from "../../styles/MediaQueries"
 import { motion } from "framer-motion"
 
 export const Overlay = styled(motion.div)`
@@ -27,9 +28,16 @@ export const Menu = styled(motion.div)`
     left: 0;
     padding: 0 120px;
     position: fixed;
-    right: 50%;
+    right: 0;
     top: 0;
     z-index: 4;
+
+    @media ${media.md} {
+        min-width: 800px;
+        right: auto;
+        width: 50%;
+    }
+
 `
 
 export const StyledLink = styled(Link)`

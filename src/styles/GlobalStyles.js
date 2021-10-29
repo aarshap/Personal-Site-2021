@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import { media } from "./MediaQueries"
 
 const GlobalStyles = createGlobalStyle`
 
@@ -61,30 +62,50 @@ const GlobalStyles = createGlobalStyle`
     }
 
     section {
-        margin: 120px auto;
+        margin: 80px auto;
+
+        @media ${media.md} {
+            margin: 120px auto;
+        }
+
     }
 
     // Typography
 
     h1 {
         font-family: var(--family-heading);
-        font-size: 80px;
+        font-size: 48px;
         font-weight: 800;
         line-height: var(--line-height-display);
+
+        @media ${media.md} {
+            font-size: 80px;
+        }
+
     }
 
     h2 {
         font-family: var(--family-heading);
-        font-size: 56px;
+        font-size: 32px;
         font-weight: 800;
         line-height: var(--line-height-display);
+
+        @media ${media.md} {
+            font-size: 56px;
+        }
+
     }
 
     h3 {
         font-family: var(--family-heading);
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 500;
         line-height: var(--line-height-heading);
+
+        @media ${media.md} {
+            font-size: 28px;
+        }
+
     }
 
     h4 {
@@ -96,9 +117,14 @@ const GlobalStyles = createGlobalStyle`
 
     p {
         font-family: var(--family-body);
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 400;
         line-height: var(--line-height-paragraph);
+
+        @media ${media.md} {
+            font-size: 28px;
+        }
+
     }
 
     em {

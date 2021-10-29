@@ -1,26 +1,35 @@
 import styled from "styled-components"
+import { media } from "../../styles/MediaQueries"
 
 export const Wrapper = styled.div`
-    text-align: center;
+    
+    @media ${media.md} {
+        text-align: center;
+    }
+
 `
 
 export const Statement = styled.h1`
-    font-size: 56px;
-    margin: 0 auto 80px;
+    margin-bottom: 32px;
     max-width: 1440px;
 
     .small { display: block; }
     .large { display: none; }
 
-    @media screen and (min-width: 800px) {
+    @media ${media.sm} {
+        font-size: calc(64px + (96 - 64) * ((100vw - 375px) / (800 - 375)));
+    }
+
+    @media ${media.md} {
         font-size: calc(60px + (120 - 60) * ((100vw - 800px) / (1600 - 800)));
+        margin: 0 auto 80px;
 
         .small { display: none; }
         .large { display: block; }
 
     }
 
-    @media screen and (min-width: 1600px) {
+    @media ${media.lg}
         font-size: 120px;
     }
 

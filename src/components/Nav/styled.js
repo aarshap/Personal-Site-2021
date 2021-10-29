@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { media } from "../../styles/MediaQueries"
 
 // SVGs
 
@@ -30,7 +31,7 @@ export const BrandCircle = styled.circle`
 
 export const Bar = styled.div`
     bottom: 0;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     left: ${props => props.position === "left" ? 0 : "auto"};
@@ -43,6 +44,10 @@ export const Bar = styled.div`
 
     > div {
         min-height: 80px;
+    }
+
+    @media ${media.md} {
+        display: flex;
     }
 
 `

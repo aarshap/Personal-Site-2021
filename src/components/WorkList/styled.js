@@ -1,14 +1,25 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { media } from "../../styles/MediaQueries"
 
 export const SectionTitle = styled.h3`
     margin-bottom: 24px;
-    text-align: center;
+
+    @media ${media.md} {
+        text-align: center;
+    }
+
 `
 
 export const Masonry = styled.div`
     display: flex;
+    flex-direction: column;
     gap: 24px;
+
+    @media ${media.md} {
+        flex-direction: row;
+    }
+
 `
 
 export const MasonryColumn = styled.div`
@@ -34,12 +45,17 @@ export const Dek = styled.h3`
 
 export const StyledLink = styled(Link)`
     background-color: ${props => props.theme.color.background.brand};
-    border-radius: 56px;
+    border-radius: 32px;
     color: ${props => props.theme.color.text.normal};
     display: flex;
     flex-direction: column;
-    padding: 32px;
+    padding: 24px;
     text-decoration: none;
+
+    @media ${media.md} {
+        border-radius: 56px;
+        padding: 32px;
+    }
 
     :hover ${Dek} {
         color: ${props => props.theme.color.text.normal};
@@ -50,11 +66,19 @@ export const StyledLink = styled(Link)`
         color: ${props => props.theme.color.text.inverted};
         margin-bottom: 24px;
         overflow: hidden;
-        text-align: center;
+
+        @media ${media.md} {
+            text-align: center;
+        }
 
         div${ImageWrapper} {
-            margin: -32px -32px 32px -32px;
+            margin: -24px -24px 24px -24px;
             user-select: none;
+
+            @media ${media.md} {
+                margin: -32px -32px 32px -32px;
+            }
+
         }
 
         :hover ${Dek} {
@@ -70,8 +94,14 @@ export const StyledLink = styled(Link)`
         justify-content: space-between;
 
         div${ImageWrapper} {
-            transform: rotate(-15deg) translateX(-40px);
-            user-select: none;
+            display: none;
+
+            @media ${media.md} {
+                display: block;
+                transform: rotate(-15deg) translateX(-40px);
+                user-select: none;    
+            }
+
         }
 
         .gatsby-image-wrapper {
@@ -88,8 +118,14 @@ export const StyledLink = styled(Link)`
     &.karma {
 
         div${ImageWrapper} {
-            margin: 0 32px 32px;
-            user-select: none;
+            display: none;
+
+            @media ${media.md} {
+                display: block;
+                margin: 0 32px 32px;
+                user-select: none;    
+            }
+
         }
 
         .gatsby-image-wrapper {
