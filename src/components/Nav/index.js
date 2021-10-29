@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import * as Styled from "./styled"
 import { Link } from "gatsby"
+import { motion, AnimatePresence } from "framer-motion"
 import ThemeSwitcher from "./themeSwitcher"
 import Menu from "../NavMenu"
 
@@ -46,9 +47,24 @@ export default () => {
         })
     }
     
+    // Framer motion variants
+
+    const CloseIconVariants = {
+        hidden: {
+            opacity: 0,
+            rotate: 90
+        },
+        visible: {
+            opacity: 1,
+            rotate: 0,
+        }
+    }
+
     return (
         <>
-            { menuOpen && <Menu closeMenu={closeMenu} /> }
+            <AnimatePresence>
+                { menuOpen && <Menu closeMenu={closeMenu} /> }
+            </AnimatePresence>
             <Styled.Bar position="left">
                 <div>
                     <Link to="/">
@@ -66,10 +82,19 @@ export default () => {
                     <button onClick={() => toggleMenu()}>
                         <Styled.ClickTarget rotate="270">
                             { menuOpen
-                                ? <Styled.Icon xmlns="http://www.w3.org/2000/svg">
-                                    <Styled.Path d="M29.795 32 32 29.795 22.205 20 32 10.205 29.795 8 20 17.795 10.205 8 8 10.205 17.795 20 8 29.795 10.205 32 20 22.205 29.795 32Z" />
-                                  </Styled.Icon>                    
-                                : <h3>Work</h3>
+                                ?
+                                    <motion.div
+                                        initial="hidden"
+                                        animate="visible"
+                                        exit="hidden"
+                                        variants={CloseIconVariants}
+                                    >
+                                        <Styled.Icon xmlns="http://www.w3.org/2000/svg">
+                                            <Styled.Path d="M29.795 32 32 29.795 22.205 20 32 10.205 29.795 8 20 17.795 10.205 8 8 10.205 17.795 20 8 29.795 10.205 32 20 22.205 29.795 32Z" />
+                                        </Styled.Icon>
+                                    </motion.div>
+                                :
+                                    <h3>Work</h3>
                             }
                         </Styled.ClickTarget>
                     </button>

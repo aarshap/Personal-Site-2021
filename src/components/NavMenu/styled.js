@@ -1,11 +1,11 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { motion } from "framer-motion"
 
-export const Overlay = styled.div`
+export const Overlay = styled(motion.div)`
     background-color: ${props => props.theme.color.text.normal};
     bottom: 0;
     left: 0;
-    opacity: 0.9;
     position: fixed;
     right: 0;
     top: 0;
@@ -17,7 +17,7 @@ export const Overlay = styled.div`
 
 `
 
-export const Menu = styled.div`
+export const Menu = styled(motion.div)`
     align-items: stretch;
     background-color: ${props => props.theme.color.background.normal};
     bottom: 0;

@@ -31,10 +31,43 @@ export default (props) => {
     }
     `)
 
+    // Framer motion variants
+
+    const menuVariants = {
+        hidden: {
+            x: -20,
+            opacity: 0
+        },
+        visible: {
+            x: 0,
+            opacity: 1
+        }
+    }
+
+    const overlayVariants = {
+        hidden: {
+            opacity: 0
+        },
+        visible: {
+            opacity: 0.9
+        }
+    }
+
     return (
         <>
-            <Styled.Overlay onClick={() => props.closeMenu()} />
-            <Styled.Menu>
+            <Styled.Overlay
+                onClick={() => props.closeMenu()}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={overlayVariants}
+            />
+            <Styled.Menu
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={menuVariants}
+            >
                 {data.allMdx.edges.map(({ node }) => (
                     <Styled.StyledLink
                         onClick={() => props.closeMenu()}
