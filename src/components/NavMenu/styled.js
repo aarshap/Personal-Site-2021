@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 export const Overlay = styled(motion.div)`
     background-color: ${props => props.theme.color.text.normal};
     bottom: 0;
+    display: none;
     left: 0;
     position: fixed;
     right: 0;
@@ -14,6 +15,10 @@ export const Overlay = styled(motion.div)`
 
     &:hover {
         cursor: pointer;
+    }
+
+    @media ${media.md} {
+        display: block;
     }
 
 `
@@ -57,4 +62,12 @@ export const StyledLink = styled(Link)`
 
 export const Title = styled.h3`
     margin: 0;
+`
+
+export const MobileLinks = styled.div`
+
+    @media ${media.md} {
+        display: none;
+    }
+
 `

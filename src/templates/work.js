@@ -21,6 +21,7 @@ export default ({ data }) => {
 
     const post = data.mdx
 
+
     return (
         <Layout>
             <SEO

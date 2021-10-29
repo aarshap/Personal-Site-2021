@@ -44,7 +44,7 @@ export const BrandCircle = styled.circle`
 export const Bar = styled.div`
     align-items: center;
     background-color: ${props => props.theme.color.background.normal};
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    box-shadow: ${props => props.showShadow ? props.theme.navShadow : "none"};
     display: ${props => props.position === "primary" ? "flex" : "none"};
     flex-direction: row;
     height: 80px;

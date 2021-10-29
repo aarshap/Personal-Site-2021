@@ -9,6 +9,10 @@ import Menu from "../NavMenu"
 
 export default () => {
 
+    // Nav bar states
+
+    const [showShadow, setShowShadow] = useState(false)
+
     // Menu states
 
     const [menuOpen, setMenuOpen] = useState(false)
@@ -23,13 +27,21 @@ export default () => {
         setMenuOpen(false)
     }
 
+    // Hide/show shadow on mobile nav bar
+
+    const toggleShadow = () => {
+        window.scrollY >= 10 ? setShowShadow(true) : setShowShadow(false)
+    }
+
+    // Scroll depth
+
+    window.addEventListener("scroll", toggleShadow)
+
     // Disable body scrolling while menu is open
     
-    if (menuOpen) {
-        document.body.style.overflow = "hidden";
-    } else {
-        document.body.style.overflow = "visible";
-    }
+    menuOpen
+        ? document.body.style.overflow = "hidden"
+        : document.body.style.overflow = "visible"
 
     // Scroll to top
 
@@ -72,7 +84,7 @@ export default () => {
                 { menuOpen && <Menu closeMenu={closeMenu} /> }
             </AnimatePresence>
 
-            <Styled.Bar position="primary">
+            <Styled.Bar position="primary" showShadow={showShadow}>
                 <Styled.LogoWrapper>
                     <Link to="/">
                         <Styled.ClickTarget>

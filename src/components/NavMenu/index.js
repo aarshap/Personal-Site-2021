@@ -78,6 +78,11 @@ export default (props) => {
                         <Pill>{node.frontmatter.dateStart === node.frontmatter.dateEnd ? node.frontmatter.dateEnd : `${node.frontmatter.dateStart} - ${node.frontmatter.dateEnd}`}</Pill>
                     </Styled.StyledLink>
                 ))}
+                <Styled.MobileLinks>
+                    <Styled.StyledLink to="/info">
+                        <Styled.Title>Info</Styled.Title>
+                    </Styled.StyledLink>
+                </Styled.MobileLinks>
             </Styled.Menu>
         </>
     )
