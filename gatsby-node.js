@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     fields: [frontmatter___date],
                     order: DESC 
                 },
-                filter: { fileAbsolutePath: {regex: "/(writing)/"} }
+                filter: { fileAbsolutePath: {regex: "/(posts/writing)/"} }
             ) {
                 edges {
                     node {
@@ -62,7 +62,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     fields: [frontmatter___date],
                     order: DESC 
                 },
-                filter: { fileAbsolutePath: {regex: "/(photography)/"} }
+                filter: { fileAbsolutePath: {regex: "/(posts/photography)/"} }
             ) {
                 edges {
                     node {
@@ -77,7 +77,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     fields: [frontmatter___date],
                     order: DESC 
                 },
-                filter: { fileAbsolutePath: {regex: "/(work)/"} }
+                filter: { fileAbsolutePath: {regex: "/(posts/work)/"} }
             ) {
                 edges {
                     node {

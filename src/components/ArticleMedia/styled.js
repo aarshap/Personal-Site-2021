@@ -1,9 +1,10 @@
 import styled from "styled-components"
+import { media } from "../../styles/MediaQueries"
 
 export const Wrapper = styled.div`
-    margin: 80px auto;
+    margin: 24px auto;
 
-    @media (min-width: 800px) {
+    @media ${media.md} {
         float: ${props => props.float ? "right" : "none" };
         margin: ${props => props.float ? "0 0 80px 80px" : "80px auto" };
         width: ${props => props.float ? "50%" : "auto" };
@@ -19,5 +20,10 @@ export const Wrapper = styled.div`
 `
 
 export const Caption = styled.h4`
-    margin-top: 32px;
+    margin-top: 24px;
+
+    @media ${media.md} {
+        margin-top: 32px;
+    }
+
 `
