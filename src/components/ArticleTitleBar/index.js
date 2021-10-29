@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import * as Styled from "./styled"
-import { useTransform, useViewportScroll } from "framer-motion"
+import { useViewportScroll } from "framer-motion"
 
 export default (props) => {
 

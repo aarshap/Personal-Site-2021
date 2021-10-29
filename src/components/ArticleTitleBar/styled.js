@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     right: 0;
     text-align: center;
     top: 0;
-    z-index: 4;
+    z-index: 2;
 
     @media ${media.md} {
         display: flex;
