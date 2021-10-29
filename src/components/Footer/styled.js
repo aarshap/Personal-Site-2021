@@ -3,6 +3,7 @@ import { media } from "../../styles/MediaQueries"
 
 export const Wrapper = styled.div`
     background-color: ${props => props.theme.color.background.inverted};
+    border-radius: 32px 32px 0 0;
     color: ${props => props.theme.color.text.inverted};
     margin: 0 -24px;
 
@@ -19,7 +20,7 @@ export const Wrapper = styled.div`
 
 export const PrimaryWrapper = styled.div`
     border-bottom: 3px solid ${props => props.theme.color.divider.inverted};
-    padding: 40px 24px;
+    padding: 120px 24px;
 
     @media ${media.md} {
         padding: 120px 32px;

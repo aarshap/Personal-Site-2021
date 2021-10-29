@@ -74,7 +74,7 @@ const GlobalStyles = createGlobalStyle`
 
     h1 {
         font-family: var(--family-heading);
-        font-size: 48px;
+        font-size: 54px;
         font-weight: 800;
         line-height: var(--line-height-display);
 
@@ -86,7 +86,7 @@ const GlobalStyles = createGlobalStyle`
 
     h2 {
         font-family: var(--family-heading);
-        font-size: 32px;
+        font-size: 36px;
         font-weight: 800;
         line-height: var(--line-height-display);
 
@@ -98,7 +98,7 @@ const GlobalStyles = createGlobalStyle`
 
     h3 {
         font-family: var(--family-heading);
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 500;
         line-height: var(--line-height-heading);
 
@@ -117,7 +117,7 @@ const GlobalStyles = createGlobalStyle`
 
     p {
         font-family: var(--family-body);
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 400;
         line-height: var(--line-height-paragraph);
 

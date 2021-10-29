@@ -29,7 +29,7 @@ export const Statement = styled.h1`
 
     }
 
-    @media ${media.lg}
+    @media ${media.lg} {
         font-size: 120px;
     }
 

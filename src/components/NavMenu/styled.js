@@ -26,7 +26,7 @@ export const Menu = styled(motion.div)`
     flex-direction: column;
     justify-content: center;
     left: 0;
-    padding: 0 120px;
+    padding: 0 24px;
     position: fixed;
     right: 0;
     top: 0;
@@ -34,6 +34,7 @@ export const Menu = styled(motion.div)`
 
     @media ${media.md} {
         min-width: 800px;
+        padding: 0 120px;
         right: auto;
         width: 50%;
     }

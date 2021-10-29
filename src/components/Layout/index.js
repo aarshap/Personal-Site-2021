@@ -19,6 +19,7 @@ export default ({ children }) => {
                         }}
                     >
                         <GlobalStyles />
+                        <Styled.TinyMask>&#129300;</Styled.TinyMask>
                         <Styled.Wrapper>
                             <Nav />
                             { children }
