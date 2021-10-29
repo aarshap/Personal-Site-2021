@@ -8,17 +8,18 @@ export default (props) => {
 
     const [showBar, setShowBar] = useState(false)
 
+    // Scroll depth
+
+    const { scrollYProgress } = useViewportScroll()
+    const { scrollY } = useViewportScroll()
+
     // Hide/show bar
 
     const toggleBar = () => {
-        window.scrollY >= 160 ? setShowBar(true) : setShowBar(false)
+        scrollY.current >= 160 ? setShowBar(true) : setShowBar(false)
     }
 
-    // Scroll depth
-
     window.addEventListener("scroll", toggleBar)
-
-    const { scrollYProgress } = useViewportScroll()
 
     return (
         <>

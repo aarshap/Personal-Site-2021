@@ -37,5 +37,5 @@ export const dark = {
             brand: "#D7B25F"
         }
     },
-    navShadow: "0 1px 1px rgba(255,255,255,0.1)"
+    navShadow: "0 1px 0 rgba(255,255,255,0.3)"
 }
