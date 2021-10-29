@@ -37,6 +37,7 @@ export const Bar = styled.div`
     position: fixed;
     right: ${props => props.position === "right" ? 0 : "auto"};
     top: 0;
+    user-select: none;
     width: 80px;
     z-index: 5;
 

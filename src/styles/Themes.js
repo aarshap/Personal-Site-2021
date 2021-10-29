@@ -3,7 +3,8 @@ export const light = {
         background: {
             normal: "#FFFFFF",
             inverted: "#000000",
-            brand: "#FAF6EF"
+            brand: "#FAF6EF",
+            userSelect: "rgba(215, 178, 95, 0.3)"
         },
         divider: {
             normal: "#E9E9E9",
@@ -22,7 +23,8 @@ export const dark = {
         background: {
             normal: "#000000",
             inverted: "#111111",
-            brand: "#111111"
+            brand: "#111111",
+            userSelect: "rgba(215, 178, 95, 0.2)"
         },
         divider: {
             normal: "#111111",

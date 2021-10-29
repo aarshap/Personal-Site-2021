@@ -47,6 +47,10 @@ const GlobalStyles = createGlobalStyle`
 
     // Base page styles
 
+    ::selection {
+        background: ${props => props.theme.color.background.userSelect};
+    }
+
     body {
         background-color: ${props => props.theme.color.background.normal};
         color: ${props => props.theme.color.text.normal};

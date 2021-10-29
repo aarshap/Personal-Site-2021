@@ -54,6 +54,7 @@ export const StyledLink = styled(Link)`
 
         div${ImageWrapper} {
             margin: -32px -32px 32px -32px;
+            user-select: none;
         }
 
         :hover ${Dek} {
@@ -70,6 +71,7 @@ export const StyledLink = styled(Link)`
 
         div${ImageWrapper} {
             transform: rotate(-15deg) translateX(-40px);
+            user-select: none;
         }
 
         .gatsby-image-wrapper {
@@ -87,6 +89,7 @@ export const StyledLink = styled(Link)`
 
         div${ImageWrapper} {
             margin: 0 32px 32px;
+            user-select: none;
         }
 
         .gatsby-image-wrapper {

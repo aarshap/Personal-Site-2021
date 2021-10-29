@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
     height: 32px;
     padding: 0 16px;
     text-decoration: none;
+    user-select: none;
 
     h4 {
         margin: 0;

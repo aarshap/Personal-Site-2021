@@ -1,5 +1,6 @@
 import React from "react"
 import * as Styled from "./styled"
+import JiggleText from "../JiggleText"
 
 export default () => {
     return (
@@ -19,7 +20,7 @@ export default () => {
             </Styled.Statement>
             <div className="container">
                 <Styled.Bio>I’m Aaron – a Brooklyn-based product designer with over a decade of experience working on behalf of journalists, artists, and makers.</Styled.Bio>
-                <Styled.Bio>Creative people make me <em>happy</em>.</Styled.Bio>
+                <Styled.Bio>Creative people make me <em><JiggleText>happy</JiggleText></em>.</Styled.Bio>
             </div>
         </Styled.Wrapper>
     )
