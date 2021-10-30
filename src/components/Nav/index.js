@@ -46,7 +46,6 @@ export default () => {
             ? document.body.style.overflow = "hidden"
             : document.body.style.overflow = "visible"
     })
-    
 
     // Scroll to top
 
