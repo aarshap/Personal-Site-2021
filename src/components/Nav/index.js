@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import * as Styled from "./styled"
 import { Link } from "gatsby"
 import { media } from "../../styles/MediaQueries"
@@ -29,13 +29,15 @@ export default () => {
 
     // Hide/show shadow on mobile nav bar
 
-    const toggleShadow = () => {
-        window.scrollY >= 10 ? setShowShadow(true) : setShowShadow(false)
-    }
+    useEffect(() => {
 
-    // Scroll depth
+        const toggleShadow = () => {
+            window.scrollY >= 10 ? setShowShadow(true) : setShowShadow(false)
+        }
 
-    window.addEventListener("scroll", toggleShadow)
+        window.addEventListener("scroll", toggleShadow)
+        
+    })
 
     // Disable body scrolling while menu is open
     

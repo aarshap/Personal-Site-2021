@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import * as Styled from "./styled"
 import { useViewportScroll } from "framer-motion"
 
@@ -15,11 +15,15 @@ export default (props) => {
 
     // Hide/show bar
 
-    const toggleBar = () => {
-        scrollY.current >= 160 ? setShowBar(true) : setShowBar(false)
-    }
+    useEffect(() => {
 
-    window.addEventListener("scroll", toggleBar)
+        const toggleBar = () => {
+            scrollY.current >= 160 ? setShowBar(true) : setShowBar(false)
+        }
+
+        window.addEventListener("scroll", toggleBar)
+
+    })
 
     return (
         <>
