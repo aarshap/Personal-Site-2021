@@ -40,10 +40,13 @@ export default () => {
     })
 
     // Disable body scrolling while menu is open
+
+    useEffect(() => {
+        menuOpen
+            ? document.body.style.overflow = "hidden"
+            : document.body.style.overflow = "visible"
+    })
     
-    menuOpen
-        ? document.body.style.overflow = "hidden"
-        : document.body.style.overflow = "visible"
 
     // Scroll to top
 
