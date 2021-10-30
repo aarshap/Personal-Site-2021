@@ -8,11 +8,16 @@ module.exports = {
         "gatsby-plugin-image",
         "gatsby-plugin-mdx-embed",
         "gatsby-plugin-sass",
-        "gatsby-plugin-sharp",
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-styled-components",
         "gatsby-remark-images",
         "gatsby-transformer-sharp",
+        {
+            resolve: "gatsby-plugin-sharp",
+            options: {
+                defaultQuality: 90
+            }
+        },
         {
             resolve: "gatsby-plugin-mdx",
             options: {
