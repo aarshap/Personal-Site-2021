@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import * as Styled from "./styled"
 import { useViewportScroll } from "framer-motion"
 
-export default (props) => {
+const ArticleTitleBar = (props) => {
 
     //  State
 
@@ -41,3 +41,5 @@ export default (props) => {
         </>
     )
 }
+
+export default ArticleTitleBar

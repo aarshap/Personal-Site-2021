@@ -3,7 +3,7 @@ import * as Styled from "./styled"
 import { graphql, useStaticQuery } from "gatsby"
 import Pill from "../Pill"
 
-export default (props) => {
+const NavMenu = (props) => {
 
     // Data
 
@@ -87,3 +87,5 @@ export default (props) => {
         </>
     )
 }
+
+export default NavMenu

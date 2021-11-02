@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import * as Styled from "./styled"
 import ArticleCard from "../ArticleCard"
 
-export default (props) => {
+const PhotographyList = (props) => {
 
     // Data
 
@@ -49,3 +49,5 @@ export default (props) => {
         </>
     )
 }
+
+export default PhotographyList

@@ -7,7 +7,7 @@ import Footer from "../Footer"
 import Nav from "../Nav"
 import Theme from "../Theme"
 
-export default ({ children }) => {
+const Layout = ({ children }) => {
     return (
         <>
             <ThemeContextProvider>
@@ -31,3 +31,5 @@ export default ({ children }) => {
         </>
     )
 }
+
+export default Layout

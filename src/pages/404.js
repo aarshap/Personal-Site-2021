@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import SEO from "../components/SEO"
+import Head from "../components/Head"
 import styled from "styled-components"
 
-export default () => {
+const NotFound = () => {
 
     const StyledLink = styled(Link)`
         align-items: center;
@@ -25,10 +25,12 @@ export default () => {
     
     return (
         <>
-            <SEO title="404 Horse" />
+            <Head title="404 Horse" />
             <StyledLink to="/">
                 <Horse src="/horse.gif" alt="404 Horse" />
             </StyledLink>
         </>
     )
 }
+
+export default NotFound

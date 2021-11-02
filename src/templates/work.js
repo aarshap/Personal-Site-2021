@@ -8,10 +8,10 @@ import ArticleIntro from "../components/ArticleIntro"
 import ArticleMedia from "../components/ArticleMedia"
 import ArticleTitleBar from "../components/ArticleTitleBar"
 import Grid from "../components/Grid"
+import Head from "../components/Head"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
 
-export default ({ data }) => {
+const Work = ({ data }) => {
 
     // Components usable in MDX
 
@@ -23,7 +23,7 @@ export default ({ data }) => {
 
     return (
         <Layout>
-            <SEO
+            <Head
                 title={post.frontmatter.title}
                 description={post.frontmatter.dek}
             />
@@ -72,3 +72,5 @@ export const query = graphql`
         }
     }
 `
+
+export default Work

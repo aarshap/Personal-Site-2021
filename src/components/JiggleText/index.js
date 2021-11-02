@@ -1,7 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 
-export default ({ children }) => {
+const JiggleText = ({ children }) => {
     const wordArray = children.split(" ")
     const charArray = wordArray.map(word => (
         word.split("")
@@ -59,3 +59,5 @@ export default ({ children }) => {
     )
 
 }
+
+export default JiggleText

@@ -1,15 +1,15 @@
 import React from "react"
 import WritingList from "../components/WritingList"
+import Head from "../components/Head"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import PhotographyList from "../components/PhotographyList"
-import SEO from "../components/SEO"
 import WorkList from "../components/WorkList"
 
-export default () => {
+const Index = () => {
     return (
         <Layout>
-            <SEO title="Home" />
+            <Head title="Home" />
             <section>
                 <Hero />
             </section>
@@ -27,3 +27,5 @@ export default () => {
         </Layout>
     )
 }
+
+export default Index

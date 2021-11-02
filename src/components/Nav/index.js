@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react"
 import * as Styled from "./styled"
 import { Link } from "gatsby"
-import { media } from "../../styles/MediaQueries"
 import { motion, AnimatePresence } from "framer-motion"
-import { useMediaQuery } from "@react-hook/media-query"
-import ThemeSwitcher from "./themeSwitcher"
+import ThemeSwitcher from "./ThemeSwitcher"
 import Menu from "../NavMenu"
 
-export default () => {
+const Nav = () => {
 
     // Nav bar states
 
@@ -77,10 +75,6 @@ export default () => {
             rotate: 0,
         }
     }
-
-    // Media query hook
-
-    const isMd = useMediaQuery(media.md)
 
     return (
         <>
@@ -171,3 +165,5 @@ export default () => {
         </>
     )
 }
+
+export default Nav

@@ -2,7 +2,7 @@ import React from "react"
 import * as Styled from "./styled"
 import Pill from "../Pill"
 
-export default (props) => {
+const ArticleCard = (props) => {
     return (
         <Styled.StyledLink to={props.slug}>
             <Styled.Title>{props.title}</Styled.Title>
@@ -21,3 +21,5 @@ export default (props) => {
         </Styled.StyledLink>
     )
 }
+
+export default ArticleCard

@@ -1,14 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import ArticleBody from "../components/ArticleBody"
+import Head from "../components/Head"
 import InfoIntro from "../components/InfoIntro"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
 
-export default () => {
+const Info = () => {
     return (
         <Layout>
-            <SEO
+            <Head
                 title="Info"
             />
             <InfoIntro />
@@ -27,3 +27,5 @@ export default () => {
         </Layout>
     )
 }
+
+export default Info

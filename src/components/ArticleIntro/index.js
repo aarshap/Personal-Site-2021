@@ -3,7 +3,7 @@ import * as Styled from "./styled"
 import Grid from "../Grid"
 import Pill from "../Pill"
 
-export default (props) => {
+const ArticleIntro = (props) => {
     return (
         <>
             <Styled.Eyebrow>
@@ -48,3 +48,5 @@ export default (props) => {
         </>
     )
 }
+
+export default ArticleIntro
