@@ -101,7 +101,7 @@ export default () => {
                         </Styled.ClickTarget>
                     </Link>
                 </Styled.LogoWrapper>
-                <Styled.WorkWrapper>
+                <Styled.MenuWrapper>
                     <button onClick={() => toggleMenu()}>
                         <Styled.ClickTarget rotate="270">
                             { menuOpen
@@ -118,18 +118,19 @@ export default () => {
                                     </motion.div>
                                 :
                                     <>
-                                        {isMd
-                                            ? <h3>Work</h3>
-                                            :
-                                                <Styled.Icon xmlns="http://www.w3.org/2000/svg">
-                                                    <Styled.Path d="M4 12h32v3H4zM4 24h32v3H4z" />
-                                                </Styled.Icon>
-                                        }
+                                        <Styled.MenuTargetWritten>
+                                            <h3>Work</h3>
+                                        </Styled.MenuTargetWritten>
+                                        <Styled.MenuTargetIcon>
+                                            <Styled.Icon xmlns="http://www.w3.org/2000/svg">
+                                                <Styled.Path d="M4 12h32v3H4zM4 24h32v3H4z" />
+                                            </Styled.Icon>
+                                        </Styled.MenuTargetIcon>
                                     </>
                             }
                         </Styled.ClickTarget>
                     </button>
-                </Styled.WorkWrapper>
+                </Styled.MenuWrapper>
                 <Styled.ThemeWrapper>
                     { <ThemeSwitcher menuOpen={menuOpen} /> }
                 </Styled.ThemeWrapper>
