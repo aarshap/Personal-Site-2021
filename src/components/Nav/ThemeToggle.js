@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import * as Styled from "./styled"
 import { ThemeContext } from "../../contexts/ThemeContext"
 
-const ThemeSwitcher = (props) => {
+const ThemeToggle = (props) => {
     const { theme, toggleTheme } = useContext(ThemeContext)
 
     // Click handler
@@ -41,4 +41,4 @@ const ThemeSwitcher = (props) => {
     
 }
 
-export default ThemeSwitcher
+export default ThemeToggle

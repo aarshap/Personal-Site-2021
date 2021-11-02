@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import * as Styled from "./styled"
 import { Link } from "gatsby"
 import { motion, AnimatePresence } from "framer-motion"
-import ThemeSwitcher from "./ThemeSwitcher"
+import ThemeToggle from "./ThemeToggle"
 import Menu from "../NavMenu"
 
 const Nav = () => {
@@ -126,7 +126,7 @@ const Nav = () => {
                     </button>
                 </Styled.MenuWrapper>
                 <Styled.ThemeWrapper>
-                    { <ThemeSwitcher menuOpen={menuOpen} /> }
+                    { <ThemeToggle menuOpen={menuOpen} /> }
                 </Styled.ThemeWrapper>
             </Styled.Bar>
             <Styled.Bar position="secondary">
