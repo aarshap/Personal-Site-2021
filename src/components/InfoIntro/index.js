@@ -2,7 +2,7 @@ import React from "react"
 import * as Styled from "./styled"
 import { StaticImage } from "gatsby-plugin-image"
 
-export default () => {
+const InfoIntro = () => {
     return (
         <Styled.Wrapper>
             <Styled.ImageWrapper>
@@ -23,3 +23,5 @@ export default () => {
         </Styled.Wrapper>
     )
 }
+
+export default InfoIntro

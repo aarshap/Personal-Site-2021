@@ -3,7 +3,7 @@ import * as Styled from "./styled"
 import { StaticImage } from "gatsby-plugin-image"
 import Pill from "../Pill"
 
-export default () => {
+const WorkList = () => {
     return (
         <>
             <Styled.SectionTitle>Work</Styled.SectionTitle>
@@ -80,3 +80,5 @@ export default () => {
         </>
     )
 }
+
+export default WorkList

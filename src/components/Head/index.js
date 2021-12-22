@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 
-const SEO = (props) => {
+const Head = (props) => {
 
     const title = `${props.title} — Aaron Shapiro`
 
@@ -38,13 +38,13 @@ const SEO = (props) => {
     )
 }
 
-SEO.defaultProps = {
+Head.defaultProps = {
     title: "Aaron Shapiro",
     description: "Aaron Shapiro is a product designer in Brooklyn, New York.",
     lang: `en`,
 }
 
-SEO.propTypes = {
+Head.propTypes = {
     description: PropTypes.string,
     lang: PropTypes.string,
     image: PropTypes.object,
@@ -54,4 +54,4 @@ SEO.propTypes = {
     title: PropTypes.string.isRequired
 }
 
-export default SEO
+export default Head

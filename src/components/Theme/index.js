@@ -3,7 +3,7 @@ import { light, dark } from "../../styles/Themes"
 import { ThemeContext } from "../../contexts/ThemeContext"
 import { ThemeProvider } from "styled-components"
 
-export default ({ children }) => {
+const Theme = ({ children }) => {
     const { theme } = useContext(ThemeContext);
     const currentTheme = theme === "light" ? light : dark;
 
@@ -13,3 +13,5 @@ export default ({ children }) => {
         </ThemeProvider>
     )
 }
+
+export default Theme

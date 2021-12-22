@@ -3,7 +3,7 @@ import * as Styled from "./styled"
 import { Link } from "gatsby"
 import JiggleText from "../JiggleText"
 
-export default () => {
+const Hero = () => {
     return (
         <Styled.Wrapper>
             <Styled.Statement>
@@ -26,3 +26,5 @@ export default () => {
         </Styled.Wrapper>
     )
 }
+
+export default Hero

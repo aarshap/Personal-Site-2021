@@ -90,6 +90,23 @@ export const ClickTarget = styled.div`
 
 `
 
+export const MenuTargetIcon = styled.div`
+
+    @media ${media.md} {
+        display: none;
+    }
+
+`
+
+export const MenuTargetWritten = styled.div`
+    display: none;
+
+    @media ${media.md} {
+        display: block;
+    }
+    
+`
+
 // Individual elements used to modify order
 
 export const LogoWrapper = styled.div`
@@ -101,7 +118,7 @@ export const LogoWrapper = styled.div`
 
 `
 
-export const WorkWrapper = styled.div`
+export const MenuWrapper = styled.div`
     order: 1;
 
     @media ${media.md} {

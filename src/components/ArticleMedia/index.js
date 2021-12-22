@@ -1,7 +1,7 @@
 import React from "react"
 import * as Styled from "./styled"
 
-export default (props) => {
+const ArticleMedia = (props) => {
     return (
         <Styled.Wrapper hasShadow={props.hasShadow} float={props.float}>
             {props.children}
@@ -9,3 +9,5 @@ export default (props) => {
         </Styled.Wrapper>
     )
 }
+
+export default ArticleMedia

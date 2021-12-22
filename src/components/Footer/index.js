@@ -1,7 +1,7 @@
 import React from "react"
 import * as Styled from "./styled"
 
-export default () => {
+const Footer = () => {
     return (
         <Styled.Wrapper>
             <Styled.PrimaryWrapper>
@@ -32,3 +32,5 @@ export default () => {
         </Styled.Wrapper>
     )
 }
+
+export default Footer

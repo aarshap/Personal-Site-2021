@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react"
 import * as Styled from "./styled"
 import { Link } from "gatsby"
-import { media } from "../../styles/MediaQueries"
 import { motion, AnimatePresence } from "framer-motion"
-import { useMediaQuery } from "@react-hook/media-query"
-import ThemeSwitcher from "./themeSwitcher"
+import ThemeToggle from "./ThemeToggle"
 import Menu from "../NavMenu"
 
-export default () => {
+const Nav = () => {
 
     // Nav bar states
 
@@ -78,10 +76,6 @@ export default () => {
         }
     }
 
-    // Media query hook
-
-    const isMd = useMediaQuery(media.md)
-
     return (
         <>
             <AnimatePresence>
@@ -101,7 +95,7 @@ export default () => {
                         </Styled.ClickTarget>
                     </Link>
                 </Styled.LogoWrapper>
-                <Styled.WorkWrapper>
+                <Styled.MenuWrapper>
                     <button onClick={() => toggleMenu()}>
                         <Styled.ClickTarget rotate="270">
                             { menuOpen
@@ -118,20 +112,21 @@ export default () => {
                                     </motion.div>
                                 :
                                     <>
-                                        {isMd
-                                            ? <h3>Work</h3>
-                                            :
-                                                <Styled.Icon xmlns="http://www.w3.org/2000/svg">
-                                                    <Styled.Path d="M4 12h32v3H4zM4 24h32v3H4z" />
-                                                </Styled.Icon>
-                                        }
+                                        <Styled.MenuTargetWritten>
+                                            <h3>Work</h3>
+                                        </Styled.MenuTargetWritten>
+                                        <Styled.MenuTargetIcon>
+                                            <Styled.Icon xmlns="http://www.w3.org/2000/svg">
+                                                <Styled.Path d="M4 12h32v3H4zM4 24h32v3H4z" />
+                                            </Styled.Icon>
+                                        </Styled.MenuTargetIcon>
                                     </>
                             }
                         </Styled.ClickTarget>
                     </button>
-                </Styled.WorkWrapper>
+                </Styled.MenuWrapper>
                 <Styled.ThemeWrapper>
-                    { <ThemeSwitcher menuOpen={menuOpen} /> }
+                    { <ThemeToggle menuOpen={menuOpen} /> }
                 </Styled.ThemeWrapper>
             </Styled.Bar>
             <Styled.Bar position="secondary">
@@ -170,3 +165,5 @@ export default () => {
         </>
     )
 }
+
+export default Nav
